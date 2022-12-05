@@ -7,7 +7,9 @@
 :root {
   font-size: 62.5%;
   --bg-color: #FFFFFF;
+  --bg-dark: #000000;
   --text-color:#323238;
+  --text-darkColor: #ffffff;
   --bg-sound-primary-color: #E1E1E6;
   --bg-sound-secondary-color:#02799D;
   --sound-color-off:#323238;
@@ -23,13 +25,23 @@ body{
   min-height: 100vh;
 }
 
+header {
+  display: grid;
+  justify-content: end;
+  margin-right: 6rem;
+}
+
+.active {
+  background-color: var(--bg-dark);
+  color: var(--text-darkColor);
+}
+
 main {
     margin: auto;
     display: flex;
     gap: 19.2rem;
-    /* justify-self: center; */
     align-self:center;
-
+    padding-bottom: 7rem;
     
 }
 
@@ -42,8 +54,6 @@ main {
   text-align: center;
   text-transform: uppercase;
 
-
-  /* font-size: clamp(4rem, 4rem + 10vw, 8.8rem); */
   font-size: 12.6rem;
   line-height: 14.8rem;
   margin-bottom: 1.7rem;
@@ -106,6 +116,10 @@ button:hover{
 .on svg path{
   fill: var(--sound-color-on);
   
+}
+
+.Dark svg path {
+  fill: #ffffff  ;
 }
 
 .sounds .on {

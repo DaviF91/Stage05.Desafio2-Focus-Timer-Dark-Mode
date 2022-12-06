@@ -122,9 +122,6 @@ button:hover{
   background-color: #29292E;
 }
 
-/* .off {
-  background-color: #0A3442 ;
-} */
 
 .Dark svg path {
   fill: #ffffff  ;
@@ -161,10 +158,6 @@ input {
   cursor: pointer;
 }
 
-.volColor {
-  background-color: #ffffff;
-}
-
-.volColor::-webkit-slider-thumb{
+.volColor, .volColor::-webkit-slider-thumb {
   background-color: #ffffff;
 }

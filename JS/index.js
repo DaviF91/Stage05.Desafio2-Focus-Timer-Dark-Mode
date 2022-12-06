@@ -14,7 +14,12 @@ import {
   secondsDisplay,
   buttonLight,
   buttonDark,
-  body
+  body,
+  volForest,
+  volRain,
+  volCoffee,
+  volFireplace,
+  sectionSound
 } from './elements.js'
 import Sounds from './sounds.js'
 
@@ -69,6 +74,7 @@ buttonForest.addEventListener('click', function () {
   sound.soundCoffee.pause()
   sound.soundFireplace.pause()
   sound.loop()
+  volForest.classList.add('volColor') // bugg
 })
 
 buttonRain.addEventListener('click', function () {
@@ -80,6 +86,7 @@ buttonRain.addEventListener('click', function () {
   sound.soundRain.play()
   sound.soundCoffee.pause()
   sound.soundFireplace.pause()
+  volRain.classList.add('volColor')
 })
 
 buttonCoffee.addEventListener('click', function () {
@@ -91,6 +98,8 @@ buttonCoffee.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.play()
   sound.soundFireplace.pause()
+  volCoffee.classList.add('volColor')
+
 })
 
 buttonFireplace.addEventListener('click', function () {
@@ -102,6 +111,7 @@ buttonFireplace.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.pause()
   sound.soundFireplace.play()
+  volFireplace.classList.add('volColor')
 })
 
 buttonLight.addEventListener('click', function(){
@@ -119,6 +129,12 @@ buttonLight.addEventListener('click', function(){
   buttonAdd.classList.add('Dark')
   buttonSubtract.classList.add('Dark')
 
+  volForest.classList.add('volColor')
+  volRain.classList.add('volColor')
+  volCoffee.classList.add('volColor')
+  volFireplace.classList.add('volColor')
+
+  sectionSound.classList.add('sectionDark')
   
 })
 
@@ -136,4 +152,11 @@ buttonDark.addEventListener('click', function(){
   buttonStop.classList.remove('Dark')
   buttonAdd.classList.remove('Dark')
   buttonSubtract.classList.remove('Dark')
+
+  volForest.classList.remove('volColor')
+  volRain.classList.remove('volColor')
+  volCoffee.classList.remove('volColor')
+  volFireplace.classList.remove('volColor')
+
+  sectionSound.classList.remove('sectionDark')
 })

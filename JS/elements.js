@@ -14,6 +14,12 @@ const secondsDisplay = document.querySelector('.seconds')
 const buttonLight = document.querySelector('.lightMode')
 const buttonDark = document.querySelector('.darkMode')
 const body = document.querySelector('.body')
+const sectionSound = document.querySelector('.sounds')
+
+const volForest = document.querySelector('.volForest')
+const volRain = document.querySelector('.volRain')
+const volCoffee = document.querySelector('.volCoffee')
+const volFireplace = document.querySelector('.volFireplace')
 
 export {
   buttonPlay,
@@ -29,5 +35,10 @@ export {
   secondsDisplay,
   buttonLight,
   buttonDark,
-  body
+  body,
+  volForest,
+  volRain,
+  volCoffee,
+  volFireplace,
+  sectionSound
 }

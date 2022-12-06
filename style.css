@@ -118,10 +118,53 @@ button:hover{
   
 }
 
+.sectionDark button{
+  background-color: #29292E;
+}
+
+/* .off {
+  background-color: #0A3442 ;
+} */
+
 .Dark svg path {
   fill: #ffffff  ;
 }
 
 .sounds .on {
   background-color: var(--bg-sound-secondary-color);
+}
+
+input {
+  margin-top: 3.2rem;
+}
+
+.volForest, .volRain, .volCoffee, .volFireplace {
+  appearance: none;
+  background: #323238;
+  outline: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: .5rem;  
+
+}
+
+.volForest::-webkit-slider-thumb,
+.volRain::-webkit-slider-thumb,
+.volCoffee::-webkit-slider-thumb,
+.volFireplace::-webkit-slider-thumb{
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%; 
+
+  background: #323238;
+  cursor: pointer;
+}
+
+.volColor {
+  background-color: #ffffff;
+}
+
+.volColor::-webkit-slider-thumb{
+  background-color: #ffffff;
 }

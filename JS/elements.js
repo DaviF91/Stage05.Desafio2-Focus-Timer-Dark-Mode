@@ -21,6 +21,8 @@ const volRain = document.querySelector('.volRain')
 const volCoffee = document.querySelector('.volCoffee')
 const volFireplace = document.querySelector('.volFireplace')
 
+
+
 export {
   buttonPlay,
   buttonStop,

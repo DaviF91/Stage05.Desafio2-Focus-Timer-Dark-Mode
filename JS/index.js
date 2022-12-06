@@ -73,8 +73,16 @@ buttonForest.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.pause()
   sound.soundFireplace.pause()
-  sound.loop()
-  volForest.classList.add('volColor') // bugg
+  
+  
+  volForest.classList.add('volColor')
+  // volRain.classList.remove('volColor')
+  // volCoffee.classList.remove('volColor')
+  // volFireplace.classList.remove('volColor')
+
+  volFireplace.value = 0.5
+  volRain.value = 0.5
+  volCoffee.value = 0.5
 })
 
 buttonRain.addEventListener('click', function () {
@@ -86,7 +94,15 @@ buttonRain.addEventListener('click', function () {
   sound.soundRain.play()
   sound.soundCoffee.pause()
   sound.soundFireplace.pause()
+
   volRain.classList.add('volColor')
+  // volForest.classList.remove('volColor')
+  // volCoffee.classList.remove('volColor')
+  // volFireplace.classList.remove('volColor')
+
+  volFireplace.value = 0.5
+  volCoffee.value = 0.5
+  volForest.value = 0.5
 })
 
 buttonCoffee.addEventListener('click', function () {
@@ -98,7 +114,15 @@ buttonCoffee.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.play()
   sound.soundFireplace.pause()
+
   volCoffee.classList.add('volColor')
+  // volRain.classList.remove('volColor')
+  // volForest.classList.remove('volColor')
+  // volFireplace.classList.remove('volColor')
+
+  volFireplace.value = 0.5
+  volRain.value = 0.5
+  volForest.value = 0.5
 
 })
 
@@ -111,7 +135,16 @@ buttonFireplace.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.pause()
   sound.soundFireplace.play()
+
   volFireplace.classList.add('volColor')
+  // volRain.classList.remove('volColor')
+  // volCoffee.classList.remove('volColor')
+  // volForest.classList.remove('volColor')
+
+  volCoffee.value = 0.5
+  volRain.value = 0.5
+  volForest.value = 0.5
+  
 })
 
 buttonLight.addEventListener('click', function(){
@@ -159,4 +192,20 @@ buttonDark.addEventListener('click', function(){
   volFireplace.classList.remove('volColor')
 
   sectionSound.classList.remove('sectionDark')
+})
+
+volForest.addEventListener('input', function(){
+  sound.soundForest.volume = volForest.value
+})
+
+volRain.addEventListener('input', function(){
+  sound.soundRain.volume = volRain.value
+})
+
+volCoffee.addEventListener('input', function(){
+  sound.soundCoffee.volume = volCoffee.value
+})
+
+volFireplace.addEventListener('input', function(){
+  sound.soundFireplace.volume = volFireplace.value
 })

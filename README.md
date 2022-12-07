@@ -7,7 +7,7 @@
 </h1>
 
 <div align="center">
-  <a href="https://focus-timer-2.vercel.app/" targert="_blank"> ▶️ Visualizar Página </a>
+  <a href="https://stage05-desafio2-focus-timer-dark-mode.vercel.app/" targert="_blank"> ▶️ Visualizar Página </a>
 </div>
 </br>
 

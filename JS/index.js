@@ -73,12 +73,21 @@ buttonForest.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.pause()
   sound.soundFireplace.pause()
+  sound.pressButton()
   
-  
-  volForest.classList.add('volColor')
-  // volRain.classList.remove('volColor')
-  // volCoffee.classList.remove('volColor')
-  // volFireplace.classList.remove('volColor')
+  if(buttonLight.classList.contains('hide') == true){
+    volForest.classList.add('volColor')
+    volRain.classList.add('volColor')
+    volCoffee.classList.add('volColor')
+    volFireplace.classList.add('volColor')
+  } else {
+    volForest.classList.add('volColor')
+    volRain.classList.remove('volColor')
+    volCoffee.classList.remove('volColor')
+    volFireplace.classList.remove('volColor')
+  }
+
+
 
   volFireplace.value = 0.5
   volRain.value = 0.5
@@ -94,11 +103,20 @@ buttonRain.addEventListener('click', function () {
   sound.soundRain.play()
   sound.soundCoffee.pause()
   sound.soundFireplace.pause()
+  sound.pressButton()
 
-  volRain.classList.add('volColor')
-  // volForest.classList.remove('volColor')
-  // volCoffee.classList.remove('volColor')
-  // volFireplace.classList.remove('volColor')
+  if(buttonLight.classList.contains('hide') == true){
+    volForest.classList.add('volColor')
+    volRain.classList.add('volColor')
+    volCoffee.classList.add('volColor')
+    volFireplace.classList.add('volColor')
+  } else {
+    volRain.classList.add('volColor')
+    volForest.classList.remove('volColor')
+    volCoffee.classList.remove('volColor')
+    volFireplace.classList.remove('volColor')
+  }
+
 
   volFireplace.value = 0.5
   volCoffee.value = 0.5
@@ -114,11 +132,19 @@ buttonCoffee.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.play()
   sound.soundFireplace.pause()
+  sound.pressButton()
 
-  volCoffee.classList.add('volColor')
-  // volRain.classList.remove('volColor')
-  // volForest.classList.remove('volColor')
-  // volFireplace.classList.remove('volColor')
+  if(buttonLight.classList.contains('hide') == true){
+    volForest.classList.add('volColor')
+    volRain.classList.add('volColor')
+    volCoffee.classList.add('volColor')
+    volFireplace.classList.add('volColor')
+  } else {
+    volCoffee.classList.add('volColor')
+    volRain.classList.remove('volColor')
+    volForest.classList.remove('volColor')
+    volFireplace.classList.remove('volColor')
+  }
 
   volFireplace.value = 0.5
   volRain.value = 0.5
@@ -135,11 +161,19 @@ buttonFireplace.addEventListener('click', function () {
   sound.soundRain.pause()
   sound.soundCoffee.pause()
   sound.soundFireplace.play()
+  sound.pressButton()
 
-  volFireplace.classList.add('volColor')
-  // volRain.classList.remove('volColor')
-  // volCoffee.classList.remove('volColor')
-  // volForest.classList.remove('volColor')
+  if(buttonLight.classList.contains('hide') == true){
+    volForest.classList.add('volColor')
+    volRain.classList.add('volColor')
+    volCoffee.classList.add('volColor')
+    volFireplace.classList.add('volColor')
+  } else {
+    volFireplace.classList.add('volColor')
+    volRain.classList.remove('volColor')
+    volCoffee.classList.remove('volColor')
+    volForest.classList.remove('volColor')
+  }
 
   volCoffee.value = 0.5
   volRain.value = 0.5
@@ -148,8 +182,9 @@ buttonFireplace.addEventListener('click', function () {
 })
 
 buttonLight.addEventListener('click', function(){
-  buttonLight.classList.add('hide')
+  sound.pressButton()
   buttonDark.classList.remove('hide')
+  buttonLight.classList.add('hide')
   body.classList.add('active')
   buttonForest.classList.add('Dark')
   buttonCoffee.classList.add('Dark')
@@ -168,10 +203,11 @@ buttonLight.addEventListener('click', function(){
   volFireplace.classList.add('volColor')
 
   sectionSound.classList.add('sectionDark')
-  
+
 })
 
 buttonDark.addEventListener('click', function(){
+  sound.pressButton()
   buttonLight.classList.remove('hide')
   buttonDark.classList.add('hide')
   body.classList.remove('active')
@@ -186,10 +222,30 @@ buttonDark.addEventListener('click', function(){
   buttonAdd.classList.remove('Dark')
   buttonSubtract.classList.remove('Dark')
 
-  volForest.classList.remove('volColor')
-  volRain.classList.remove('volColor')
-  volCoffee.classList.remove('volColor')
-  volFireplace.classList.remove('volColor')
+  if(buttonForest.classList.contains('on') == true){
+    volForest.classList.add('volColor')
+  } else {
+    volForest.classList.remove('volColor')
+  }
+
+  if(buttonRain.classList.contains('on') == true){
+    volRain.classList.add('volColor')
+  } else {
+      volRain.classList.remove('volColor')
+    }
+
+  if(buttonCoffee.classList.contains('on') == true){
+  volCoffee.classList.add('volColor')
+  } else {
+    volCoffee.classList.remove('volColor')
+  }
+  
+  if(buttonFireplace.classList.contains('on') == true){
+    volFireplace.classList.add('volColor')
+  } else {
+    volFireplace.classList.remove('volColor')
+  }
+
 
   sectionSound.classList.remove('sectionDark')
 })

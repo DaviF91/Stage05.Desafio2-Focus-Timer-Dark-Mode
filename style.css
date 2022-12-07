@@ -131,6 +131,10 @@ button:hover{
   background-color: var(--bg-sound-secondary-color);
 }
 
+.sounds .onDark {
+  background-color: #0A3442;
+}
+
 input {
   margin-top: 3.2rem;
 }
